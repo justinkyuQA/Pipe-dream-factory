@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pipe Dreams</title>
+<style>
+body{background:#111;color:#eee;font-family:Arial,sans-serif;margin:20px;}
+a{color:#7cc7ff;}
+textarea{width:100%;height:350px;background:#222;color:#fff;border:1px solid #444;padding:10px;font-size:16px;}
+button{background:#7cc7ff;color:#111;border:0;padding:10px 20px;font-weight:bold;cursor:pointer;margin-top:10px;}
+#result{background:#222;border:1px solid #444;padding:15px;margin-top:20px;}
+</style>
+</head>
+<body>
+
+<h1>Pipe Dreams</h1>
+
+<p><a href="/vault">Open Vault</a></p>
+
+<textarea id="inputText" placeholder="Paste ideas here..."></textarea>
+
+<br>
+
+<button onclick="processText()">Process</button>
+
+<div id="result">Ready.</div>
+
+<hr>
+
+<h2>Recent Notes</h2>
+<ul>
+{% for file in recent %}
+<li>{{ file }}</li>
+{% endfor %}
+</ul>
+
+<script>
+async function processText(){
+let text=document.getElementById("inputText").value;
+let response=await fetch("/process",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:text})});
+let data=await response.json();
+let output="<h3>Saved</h3>";
+output+="Created "+data.count+" note(s)<hr>";
+data.saved_files.forEach(file=>{output+=file+"<br>";});
+document.getElementById("result").innerHTML=output;
+}
+</script>
+
+</body>
+</html>

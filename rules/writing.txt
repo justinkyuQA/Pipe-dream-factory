@@ -1,0 +1,13 @@
+book
+books
+chapter
+chapters
+author
+writing
+publisher
+manuscript
+article
+essay
+story
+outline
+draft

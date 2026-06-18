@@ -1,0 +1,14 @@
+bash
+chmod
+grep
+awk
+sed
+kernel
+ubuntu
+debian
+linux
+systemd
+terminal
+shell
+apt
+package

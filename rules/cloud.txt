@@ -1,0 +1,15 @@
+cloud
+oracle
+aws
+azure
+gcp
+vcn
+subnet
+instance
+server
+hosting
+vm
+virtual
+network
+route
+gateway
