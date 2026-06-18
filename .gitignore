@@ -1,5 +1,10 @@
 __pycache__/
 *.pyc
+
+vault/
+vault_refined/
+vault_chapters/
+vault_books/
+
 .env
 .venv/
-vault_books/*.pdf
