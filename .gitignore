@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.log
+.env
+venv/
+
+vault/
+vault_refined/
+vault_chapters/
+vault_books/
