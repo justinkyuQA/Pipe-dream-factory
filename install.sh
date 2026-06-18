@@ -1,28 +1,37 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/usr/bin/env bash
 
 echo "Installing Pipe Dream Factory..."
 
-cd "$(dirname "$0")" || exit 1
+mkdir -p vault/AI
+mkdir -p vault_refined/AI
+mkdir -p vault_chapters
+mkdir -p vault_books
+mkdir -p ~/bin
 
-mkdir -p vault vault_refined vault_chapters vault_books examples ~/bin
-
-if command -v pip >/dev/null 2>&1; then
-    pip install -r requirements.txt
+if command -v pip3 >/dev/null 2>&1; then
+    pip3 install -r requirements.txt
 fi
 
-if [ -z "$(find vault -type f 2>/dev/null)" ]; then
-    cp examples/sample_note.md vault/
+if [ ! -f vault/AI/sample_note.md ]; then
+    cp examples/sample_note.md vault/AI/
 fi
 
 cat > ~/bin/pdf <<'EOC'
-#!/data/data/com.termux/files/usr/bin/bash
+#!/usr/bin/env bash
+cd "$(dirname "$(realpath "$0")")" >/dev/null 2>&1
 cd ~/projects/pipe-dreams || exit 1
-python pipeline.py
+python3 pipeline.py
 EOC
 
 chmod +x ~/bin/pdf
 
-grep -q 'export PATH="$HOME/bin:$PATH"' ~/.bashrc || echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc 2>/dev/null
 
-echo "Pipe Dream Factory installed."
-echo "Run: source ~/.bashrc && pdf"
+echo ""
+echo "================================="
+echo " Pipe Dream Factory Installed "
+echo "================================="
+echo ""
+echo "Run:"
+echo "  python3 pipeline.py"
+echo ""
