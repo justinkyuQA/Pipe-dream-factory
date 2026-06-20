@@ -147,3 +147,22 @@ Core pipeline operational:
 ---
 
 Build books from notes. Build knowledge from ideas.
+## Screenshots
+
+### Web Interface
+![Web Interface](screenshots/01-web-home.jpg)
+
+### Application View
+![Application View](screenshots/02-web-view.jpg)
+
+### Terminal Startup
+![Terminal Startup](screenshots/03-terminal-start.jpg)
+
+### Demo Run
+![Demo Run](screenshots/04-terminal-demo.jpg)
+
+### Search Example
+![Search Example](screenshots/05-search-demo.jpg)
+
+### Results
+![Results](screenshots/06-results-demo.jpg)
