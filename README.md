@@ -1,172 +1,149 @@
-# Pipe Dream Factory (PDF)
+Pipe Dream Factory
 
-## A Local-First Knowledge Refinery
+Turn notes into structured books.
 
-Pipe Dream Factory transforms raw notes, research, ideas, transcripts, and documents into structured chapters and assembled books through an automated publishing pipeline.
+Pipe Dream Factory is a local-first publishing pipeline that transforms collections of notes, research, ideas, and knowledge assets into organized chapters and finished books.
 
-Instead of storing information and forgetting it, Pipe Dream Factory continuously organizes knowledge into reusable assets.
+Designed for writers, researchers, educators, and builders, Pipe Dream Factory automates the journey from raw notes to publishable knowledge.
 
 ---
 
-## How It Works
+What It Does
 
-Input:
+Pipe Dream Factory takes content stored in a vault and processes it through a multi-stage pipeline:
 
 vault/
-- Notes
-- Research
-- Ideas
-- Drafts
-- Documents
-
-Pipeline:
-
-Vault
-↓
-Refinement
-↓
-Chapter Building
-↓
-Book Assembly
-↓
-Knowledge Assets
-
-Output:
-
+    ↓
+refine_vault.py
+    ↓
+vault_refined/
+    ↓
+chapter_builder.py
+    ↓
+vault_chapters/
+    ↓
+book_assembler.py
+    ↓
 vault_books/
-- Books
-- Handbooks
-- Documentation
-- Knowledge Libraries
+
+The result is a structured handbook, reference guide, or book generated from your existing notes.
 
 ---
 
-## Philosophy
+Features
 
-Most note-taking systems focus on collection.
-
-Pipe Dream Factory focuses on transformation.
-
-Ideas become chapters.
-
-Chapters become books.
-
-Books become knowledge assets.
+- Local-first workflow
+- Markdown-based knowledge vault
+- Automated note refinement
+- Chapter generation
+- Book assembly
+- Category-based organization
+- Browser templates
+- Install script and launcher support
+- Mobile-friendly Termux workflow
 
 ---
 
-## Installation
+Project Structure
+
+examples/
+rules/
+templates/
+
+vault/
+vault_refined/
+vault_chapters/
+vault_books/
+
+refine_vault.py
+chapter_builder.py
+book_assembler.py
+pipeline.py
+
+---
+
+Quick Start
 
 Clone the repository:
 
-git clone https://github.com/justinkyuQA/pipe-dream-factory.git
+git clone https://github.com/justinkyuQA/pipe-dreams.git
+cd pipe-dreams
 
-Enter the project directory:
+Install:
 
-cd pipe-dream-factory
+chmod +x install.sh
+./install.sh
 
-Run the installer:
-
-bash install.sh
-
----
-
-## Usage
-
-Run the complete publishing pipeline:
-
-pdf
-
-Or directly:
+Run the complete pipeline:
 
 python pipeline.py
 
----
+or
 
-## Repository Structure
+./run.sh
 
-README.md
-
-install.sh
-
-pipeline.py
-
-refine_vault.py
-
-chapter_builder.py
-
-book_assembler.py
-
-app.py
-
-utils.py
-
-rules/
-
-templates/
-
-examples/
-
----
-
-## Current Pipeline
-
-refine_vault.py
-    ↓
-chapter_builder.py
-    ↓
-book_assembler.py
-
----
-
-## Design Goals
-
-- Local-first
-- Human-readable files
-- Minimal dependencies
-- Automated organization
-- Personal publishing workflows
-- Knowledge preservation
-- Reproducible outputs
-
----
-
-## Example Workflow
-
-1. Add notes to the vault.
-
-2. Run:
-
-pdf
-
-3. Review generated output in:
+Generated books will appear in:
 
 vault_books/
 
 ---
 
-## Status
+Example Workflow
 
-Prototype v0.1
+Input:
 
-Current focus:
+231 notes
+984 KB knowledge vault
 
-- Pipeline stability
-- Book generation
-- Installation experience
-- Documentation
-- PDF export support
+Pipeline:
+
+Refine Notes
+↓
+Build Chapters
+↓
+Assemble Book
+
+Output:
+
+AI_Testing_Handbook.md
 
 ---
 
-## Pipe Dream Factory
+Included Categories
 
-PDF means:
+- AI
+- Business
+- Cloud
+- Cybersecurity
+- Linux
+- Philosophy
+- Projects
+- Writing
 
-- Pipe Dream Factory
-- Portable Document Format
-- Publish, Distill, Forge
+Additional categories can be added by extending the vault and rules directories.
 
-The goal is simple:
+---
 
-Turn information into assets.
+Why Pipe Dream Factory?
+
+Most note systems stop at storage.
+
+Pipe Dream Factory focuses on transformation.
+
+Instead of collecting notes forever, the goal is to convert knowledge into structured assets that can be studied, shared, published, and expanded.
+
+---
+
+Current Status
+
+Version 1.0.0
+
+Core pipeline operational:
+
+- Vault Refinement
+- Chapter Builder
+- Book Assembly
+
+---
+
+Build books from notes. Build knowledge from ideas.
