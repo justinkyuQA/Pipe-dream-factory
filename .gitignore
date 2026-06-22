@@ -1,11 +1,7 @@
+venv/
 __pycache__/
 *.pyc
 
-# Personal content
-vault/
-vault_refined/
-vault_chapters/
-vault_books/
-
-.env
-.venv/
+exports/
+covers/
+_site/
