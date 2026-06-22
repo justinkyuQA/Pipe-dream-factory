@@ -4,4 +4,45 @@ __pycache__/
 
 exports/
 covers/
+<<<<<<< HEAD
 _site/
+=======
+
+*.log
+>>>>>>> e588973 (Add gitignore)
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env
+
+# Generated exports
+exports/*.pdf
+exports/*.epub
+exports/*.html
+
+# Generated books
+vault_books/
+
+# Generated chapters
+vault_chapters/
+
+# Refined content
+vault_refined/
+
+# Backups
+backups/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.save
+
+# Logs
+*.log
