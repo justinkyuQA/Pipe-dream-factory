@@ -1,22 +1,14 @@
 import subprocess
+import sys
 
 steps = [
-    "refine_vault.py",
-    "chapter_builder.py",
-    "book_assembler.py"
+    "formatter.py",
+    "book_generator.py",
+    "export_pdf.py"
 ]
 
 for step in steps:
-    print(f"\n=== Running {step} ===\n")
+    print(f"\n=== Running {step} ===")
+    subprocess.run([sys.executable, step], check=True)
 
-    result = subprocess.run(["python", step])
-
-    if result.returncode != 0:
-        print(f"FAILED: {step}")
-        raise SystemExit(1)
-
-print("\n=================================")
-print(" Pipe Dream Factory Complete ")
-print("=================================")
-print("Check vault_books for output.")
-
+print("\nDone. Check exports/ and vault_books/")
